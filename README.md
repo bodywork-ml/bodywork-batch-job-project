@@ -36,7 +36,7 @@ To test the batch-job workflow, using a workflow-controller running on your loca
 $ bodywork workflow \
     --namespace=bodywork-batch-job \
     https://github.com/bodywork-ml/bodywork-batch-job-project \
-    master
+    main
 ```
 
 The workflow-controller logs will be streamed to your shell's standard output until the job has been successfully completed.
@@ -51,10 +51,10 @@ $ bodywork cronjob create \
     --name=score-data \
     --schedule="0 * * * *" \
     --git-repo-url=https://github.com/bodywork-ml/bodywork-batch-job-project
-    --git-repo-branch=master
+    --git-repo-branch=main
 ```
 
-Each scheduled workflow will attempt to re-run the batch-job, as defined by the state of this repository's `master` branch at the time of execution.
+Each scheduled workflow will attempt to re-run the batch-job, as defined by the state of this repository's `main` branch at the time of execution.
 
 To get the execution history for all `score-data` jobs use,
 
