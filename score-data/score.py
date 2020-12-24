@@ -59,7 +59,7 @@ def upload_results(scored_data: pd.DataFrame) -> None:
     try:
         s3_client = aws.client('s3')
         s3_client.upload_file(
-            SCORED_DATA_FILENAME,
+            f'bodywork_project/score-data/{SCORED_DATA_FILENAME}',
             SCORED_DATA_AWS_BUCKET,
             f'scored-data/{SCORED_DATA_FILENAME}'
         )
