@@ -15,7 +15,7 @@ from sklearn.base import BaseEstimator
 
 DATA_URL = ('http://bodywork-batch-job-project.s3.eu-west-2.amazonaws.com'
             '/data/iris_classification_data.csv')
-TRAINED_MODEL_FILENAME = 'score-data/classification_model.joblib'
+TRAINED_MODEL_FILENAME = 'bodywork_project/score-data/classification_model.joblib'
 SCORED_DATA_AWS_BUCKET = 'bodywork-batch-job-project'
 SCORED_DATA_FILENAME = 'iris_classification_data_scored.csv'
 
