@@ -25,7 +25,7 @@ $ pip install bodywork
 ## Setup a Kubernetes Namespace for use with Bodywork
 
 ```shell
-$ bodywork setup-namespace bodywork-batch-job
+$ bodywork setup-namespace bodywork-batch-jobs
 ```
 
 ## Run the Job
@@ -34,7 +34,7 @@ To test the batch-job workflow, using a workflow-controller running on your loca
 
 ```shell
 $ bodywork workflow \
-    --namespace=bodywork-batch-job \
+    --namespace=bodywork-batch-jobs \
     https://github.com/bodywork-ml/bodywork-batch-job-project \
     master
 ```
@@ -47,7 +47,7 @@ If you're happy with the test results, you can schedule the workflow-controller 
 
 ```shell
 $ bodywork cronjob create \
-    --namespace=bodywork-batch-job \
+    --namespace=bodywork-batch-jobs \
     --name=score-data \
     --schedule="0 * * * *" \
     --git-repo-url=https://github.com/bodywork-ml/bodywork-batch-job-project
@@ -60,7 +60,7 @@ To get the execution history for all `score-data` jobs use,
 
 ```shell
 $ bodywork cronjob history \
-    --namespace=bodywork-batch-job \
+    --namespace=bodywork-batch-jobs \
     --name=score-data \
 ```
 
@@ -75,7 +75,7 @@ Then to stream the logs from any given cronjob run (e.g. to debug and/or monitor
 
 ```shell
 $ bodywork cronjob logs \
-    --namespace=bodywork-batch-job \
+    --namespace=bodywork-batch-jobs \
     --name=score-data-1605214260
 ```
 
@@ -84,5 +84,5 @@ $ bodywork cronjob logs \
 To clean-up the deployment in its entirety, delete the namespace using kubectl - e.g. by running,
 
 ```shell
-$ kubectl delete ns bodywork-batch-job
+$ kubectl delete ns bodywork-batch-jobs
 ```
