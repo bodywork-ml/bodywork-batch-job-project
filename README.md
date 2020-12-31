@@ -61,7 +61,7 @@ To get the execution history for all `score-data` jobs use,
 ```shell
 $ bodywork cronjob history \
     --namespace=bodywork-batch-jobs \
-    --name=score-data \
+    --name=score-data
 ```
 
 Which should return output along the lines of,
