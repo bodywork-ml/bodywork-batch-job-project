@@ -1,8 +1,6 @@
+# Run Batch Jobs on Kubernetes with Bodywork
+
 ![bodywork](https://bodywork-media.s3.eu-west-2.amazonaws.com/batch_job.png)
-
----
-
-# Batch Jobs on k8s using Bodywork
 
 This repository contains a Bodywork project that demonstrates how to run a batch workload (or job) on Kubernetes (k8s), with Bodywork. To run this project, follow the steps below.
 
