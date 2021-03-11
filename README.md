@@ -2,11 +2,11 @@
 
 ![bodywork](https://bodywork-media.s3.eu-west-2.amazonaws.com/batch_job.png)
 
-This repository contains a Bodywork project that demonstrates how to run a batch workload (or job) on Kubernetes (k8s), with Bodywork. To run this project, follow the steps below.
+This repository contains a Bodywork project that demonstrates how to run a batch workload (or job) on Kubernetes, with Bodywork. To run this project, follow the steps below.
 
 ## Get Access to a Kubernetes Cluster
 
-In order to run this example project you will need access to a k8s cluster. To setup a single-node test cluster on your local machine you can use [minikube](https://minikube.sigs.k8s.io/docs/) or [docker-for-desktop](https://www.docker.com/products/docker-desktop). Check your access to k8s by running,
+In order to run this example project you will need access to a Kubernetes cluster. To setup a single-node test cluster on your local machine you can use [minikube](https://minikube.sigs.Kubernetes.io/docs/) or [docker-for-desktop](https://www.docker.com/products/docker-desktop). Check your access to Kubernetes by running,
 
 ```shell
 $ kubectl cluster-info
@@ -28,7 +28,7 @@ $ bodywork setup-namespace bodywork-batch-jobs
 
 ## Run the Job
 
-To test the batch-job workflow, using a workflow-controller running on your local machine and interacting with your k8s cluster, run,
+To test the batch-job workflow, using a workflow-controller running on your local machine and interacting with your Kubernetes cluster, run,
 
 ```shell
 $ bodywork workflow \
