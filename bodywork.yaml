@@ -1,0 +1,15 @@
+version: "1.0"
+project:
+  name: bodywork-batch-job-project
+  docker_image: bodyworkml/bodywork-core:latest
+  DAG: score_data
+stages:
+  score_data:
+    executable_module_path: score_data/score.py
+    cpu_request: 0.5
+    memory_request_mb: 100
+    batch:
+      max_completion_time_seconds: 30
+      retries: 2
+logging:
+  log_level: INFO
