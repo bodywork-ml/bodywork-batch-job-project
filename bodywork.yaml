@@ -14,7 +14,7 @@ stages:
     cpu_request: 0.5
     memory_request_mb: 100
     batch:
-      max_completion_time_seconds: 30
+      max_completion_time_seconds: 60
       retries: 2
 logging:
   log_level: INFO
